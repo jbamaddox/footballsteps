@@ -50,7 +50,7 @@ mongoose.Query.prototype.exec = async function () {
         //IF we don't have value from cache, set the value in cache and return it to mongoose
         const resultToReturn = await mongooseExecOriginal.apply(this, arguments);
 
-        redisClient.set(key, JSON.stringify(resultToReturn))
+        redisClient.set(key, JSON.stringify(resultToReturn), 3600);
 
         return resultToReturn
     } else {
