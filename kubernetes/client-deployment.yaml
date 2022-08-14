@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: fbs-client-deployment
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      component: fbs-client
+  template: 
+    metadata: 
+      labels:
+        component: fbs-client
+    spec: 
+      container:
+        - name: client
+          image: jeremybamaddox/footballsteps-client
+          ports:
+            - containerPort: 3000

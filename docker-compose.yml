@@ -8,7 +8,7 @@ services:
     depends_on:
       - redis-api-cache
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./football-steps-api
     volumes:
       - /home/node/app/node_modules
@@ -23,7 +23,7 @@ services:
       - api
       - redis-api-cache
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./football-steps-simulations
     volumes:
       - /home/node/app/node_modules
@@ -38,7 +38,7 @@ services:
       - api
       - simulations
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./football-steps-client
     volumes:
       - /home/node/app/node_modules

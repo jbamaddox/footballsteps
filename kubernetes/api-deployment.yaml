@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      component: fbs-api
+  template:
+    metadata:
+      labels:
+        component: fbs-api
+    spec: 
+      containers:
+        - name: api
+          image: jeremybamaddox/footballsteps-api
+          ports:
+            - containerPort: 4000
+          env:
+            - name: REDIS_HOST
+              value: redis-api-cache
+            - name: REDIS_PORT
+              value: '6379'
+            - name: MONGO_USER
+              valueFrom:
+                secretKeyRef:
+                  name: MONGO_USER
+                  key: MONGO_USER
+            - name: MONGO_PW
+              valueFrom:
+                secretKeyRef:
+                  name: MONGO_PW
+                  key: MONGO_PW
+            - name: MONGO_ACCOUNT
+              valueFrom:
+                secretKeyRef:
+                  name: MONGO_ACCOUNT
+                  key: MONGO_ACCOUNT
+                  

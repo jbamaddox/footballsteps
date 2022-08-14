@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simulations-deployment
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      component: fbs-sim
+  template:
+    metadata:
+      labels:
+        component: fbs-sim
+    spec:
+      containers:
+        - name: simulations
+          image: jeremybamaddox/footballsteps-simulations
+          ports:
+            - containerPort: 4001
+          env:
+            - name: REDIS_HOST
+              value: redis-simulations-cache
+            - name: REDIS_PORT
+              value: '6379'
+            - name: MONGO_USER
+              valueFrom:
+                secretKeyRef:
+                  name: MONGO_USER
+                  key: MONGO_USER
+            - name: MONGO_PW
+              valueFrom:
+                secretKeyRef:
+                  name: MONGO_PW
+                  key: MONGO_PW
+            - name: MONGO_ACCOUNT
+              valueFrom:
+                secretKeyRef:
+                  name: MONGO_ACCOUNT
+                  key: MONGO_ACCOUNT
