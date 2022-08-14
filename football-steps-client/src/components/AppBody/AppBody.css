@@ -1,0 +1,20 @@
+.appBody_Mobile {
+    width: 100%;
+    padding: 0% 0% 0% 0%;
+    margin: 70px 0% 0% 0%;
+    transition-duration: .25s;
+    background-color: rgba(255,255,255, 1);
+}
+
+.appBody_Desktop {
+    width: 50%;
+    min-width: 500px;
+    padding: 0% 0% 0% 0%;
+    margin: 120px 0% 0% 25%;
+    transition-duration: .25s;
+    background-color: rgba(255,255,255, 1);
+}
+
+.appBody_Desktop > div {
+    transition-duration: .25s;
+}

@@ -1,0 +1,29 @@
+.teamButton {
+    background: rgba(125, 125, 125, .95);
+    width: 100%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+  }
+  
+.teamImage {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  padding: 0% 0% 0% 0%;
+}
+
+.teamButtonImageContainer{
+    width: 30%;
+}
+
+.teamButtonNameContainer{
+    width: 70%;
+    margin: auto;
+    padding-top: .25em;
+    text-shadow: 2.5px 5px 7.5px black;
+    color: white;
+    font-size:1.5em;
+}

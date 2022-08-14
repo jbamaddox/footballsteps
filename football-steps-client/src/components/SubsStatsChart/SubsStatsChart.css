@@ -1,0 +1,77 @@
+.statChartButton_NotSelected{
+    width: 33.3%;
+    height: 100%;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(210,210,210);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: rgb(125,125,125);
+    transition-duration: .5s;
+    outline: none;
+    cursor: pointer;
+}
+
+.statChartButton_NotSelected:active{
+    width: 33.3%;
+    height: 100%;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(220,220,220);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: rgb(125,125,125);
+    transition-duration: .5s;
+    outline: none;
+}
+
+.statChartButton_IsSelected{
+    width: 33.3%;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(235,235,235);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-style: none;
+    transition-duration: .5s;
+    outline: none;
+}
+
+.statSelectionChart{
+    width: 100%;
+    height: 100%;
+    border-width: 10px;
+    border-color:rgb(220,220,220);
+    padding-top: 5px;
+    padding-bottom: 0px;
+    background-color: rgb(235,235,235);
+    box-shadow: 0px 6px 6px rgba(175,175,175,.75);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition-duration: .5s;
+    transition: all .5s;
+    outline: none;
+    margin-top: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.positionSubstitutionChartItem{
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+
+.chartItemTitle{
+    float: left;
+    width: 100%;
+    /*font-weight: bold;*/
+}
+
+.subData{
+    width: 100%;
+}
+

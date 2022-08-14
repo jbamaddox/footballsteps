@@ -1,0 +1,35 @@
+.executeButton {
+    width: 30%;
+    height: 35px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    /*border-width: .5px;  */
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    outline-width: 0;
+    cursor: pointer;
+    -webkit-transition-duration: 0.25s; /* Safari */
+    transition-duration: 0.25s;
+    box-shadow: 0px 4px 12px 0px rgba(125,125,125,.75);
+    outline:0;
+    float: left;
+}
+
+.executeButton:hover {
+    box-shadow: 0px 6px 18px 0px rgba(125,125,125,.85);
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+.executeButton:active {
+    box-shadow: 0px 4px 12px 0px rgba(125,125,125,.5);
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.executeButton:active:after {
+  transition: .5s;
+}

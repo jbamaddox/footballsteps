@@ -1,0 +1,29 @@
+.gameCardButton_isSelected{
+    background-color: rgb(255,255,255);
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    outline: none;
+    float: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.gameCardButton_notSelected{
+    background-color: rgb(255,255,255);
+    border-color: rgb(255,255,255);
+    border-style: solid;
+    border-width: 2px;
+    width: 100%;
+    border-style: none;
+    outline: none;
+    float: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 10px;
+}

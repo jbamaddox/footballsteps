@@ -1,0 +1,96 @@
+.logInOutContainer {
+    position: fixed;
+    min-width: 250px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(125,125,125,.75);
+    z-index: 1000;
+    transition: all;
+    transition-duration: .25s;
+}
+
+.logInOutChild {
+    float: left;
+    position: relative;
+    background-color: rgba(255,255,255,1);
+    min-width: 250px;
+    max-width: max-content;
+    min-height: 50%;
+    border-radius: 15px;
+    box-shadow: 0px 8px 8px 0px rgba(100,100,100,1);
+    transition: all;
+    transition-duration: .25s;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 20px;
+}
+
+.logInOutHeader {
+    font-size: 2em;
+    text-align: center;
+    transition-duration: .25s;
+    transition: all;
+    margin-bottom:  10px;
+}
+
+.logInOutForm {
+    min-width: max-content;
+    margin-top: 20px;
+    transition-duration: .25s;
+    transition: all;
+}
+
+.logInOutForm > input {
+    border-color: rgba(200,200,200,.25);
+    border-width: 1px;
+    background-color: rgb(255,255,255);
+    margin-bottom: 10px;
+}
+
+
+.accountButton {
+    display: block;
+    width: 240px;
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0,.25);
+    cursor: pointer;
+    border-radius: 1px;
+    height: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: rgb(117,117,117);
+    box-sizing: content-box;
+    padding: 0px;
+    border-width: 0px;
+    transition: all;
+    transition-duration: .2s;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.accountButton:hover {
+    box-shadow: 0px 0px 4px 2px rgba(206,184,136, 1);
+}
+
+#needAccountImage{
+    width: 18px;
+    height: 18px;
+    float: left;
+    padding: 15px ;
+}
+
+.accountButtonText{
+    margin-top: 15px;
+    float:none;
+    text-align: center;
+}
+
+.errorText{
+    color: red;
+    text-align: center;
+    word-wrap: normal;
+    max-width: fit-content;
+}

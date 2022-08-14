@@ -1,0 +1,55 @@
+version: '3'
+services:
+  redis-api-cache:
+    image: 'redis:6.0'
+  redis-simulations-cache:
+    image: 'redis:6.0'
+  api:
+    depends_on:
+      - redis-api-cache
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./football-steps-api
+    volumes:
+      - /home/node/app/node_modules
+      - ./football-steps-api:/home/node/app
+    environment:
+      - REDIS_HOST=redis-api-cache
+      - REDIS_PORT=6379
+    env_file:
+      - ./.env.production.local
+  simulations:
+    depends_on:
+      - api
+      - redis-api-cache
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./football-steps-simulations
+    volumes:
+      - /home/node/app/node_modules
+      - ./football-steps-simulations:/home/node/app
+    environment:
+      - REDIS_HOST=redis-simulations-cache
+      - REDIS_PORT=6379
+    env_file:
+      - ./.env.production.local
+  client:
+    depends_on:
+      - api
+      - simulations
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./football-steps-client
+    volumes:
+      - /home/node/app/node_modules
+      - ./football-steps-client:/home/node/app
+  nginx:
+    depends_on:
+      - client
+      - api
+      - simulations
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./football-steps-router
+    ports:
+      - '8080:2000'

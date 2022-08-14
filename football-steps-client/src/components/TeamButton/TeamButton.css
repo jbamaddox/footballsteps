@@ -1,0 +1,124 @@
+/*Mobile*/
+.teamButton_Mobile {
+  background: rgba(235, 235, 235, 1);
+  width: 90%;
+  height: 50px;
+  max-height: 55px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0% 0% 0% 0%;
+  /*border-width: .5px;  */
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  outline-width: 0;
+  cursor: pointer;
+  -webkit-transition-duration: 0.25s; /* Safari */
+  transition: all .25s;
+  transition-duration: 0.25s;
+  box-shadow: 0px 4px 16px 0px rgba(125,125,125,.45);
+  outline:0px;
+  overflow: hidden;
+}
+
+.teamButton_Mobile:hover {
+  box-shadow: 0px 12px 36px 0px rgba(100,100,100,.65);
+  background: rgba(255, 255, 255, 1);
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.teamButton_Mobile:active {
+  box-shadow: 0px 4px 12px 0px rgba(125,125,125,.5);
+  background: rgba(235, 235, 235, 1);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.teamButton_Mobile:active:after {
+  background:  rgba(255, 255, 255, 1);
+  transition: all .5s;
+}
+
+
+.teamButtonName_Mobile{
+  padding: 5% 0% 0% 0% ;
+  margin: 0% 0% 0% 0%;
+}
+
+.teamImage_Mobile {
+  height: 50px;
+}
+
+.dropDwonArrow_Mobile {
+  height: 10px;
+  padding: 20px 0px 15px 0px;
+}
+/*End of Mobile*/
+
+/*Desktop*/
+.teamButton_Desktop {
+  background: rgba(235, 235, 235, 1);
+  width: 90%;
+  height: 50px;
+  max-height: 55px;
+  margin: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 0% 0% 0% 0%;
+  /*border-width: .5px;  */
+  border: thin;
+  border-width: 5px;
+  border-radius: 50px;
+  text-align: center;
+  outline-width: 0;
+  cursor: pointer;
+  -webkit-transition-duration: 0.25s; /* Safari */
+  transition-duration: 0.25s;
+  transition: all .25s;
+  box-shadow: 0px 4px 20px 0px rgba(125,125,125,.5);
+  outline:0;
+}
+
+
+.teamButton_Desktop:hover {
+  text-shadow: 2.5px 3.5px 5.5px  rgba(0,0,0,.95);
+  box-shadow: 0px 10px 30px 0px rgba(125,125,125,.45);
+  background: rgba(255, 255, 255, 1);
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+
+.teamButton_Desktop:active {
+  box-shadow: 0px 4px 12px 0px rgba(125,125,125,.5);
+  background: rgba(235, 235, 235, 1);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+.teamButton_Desktop:active:after {
+  background:  rgba(255, 255, 255, 1);
+  transition: all .25s;
+}
+
+
+.teamButtonName_Desktop{
+  padding: 5% 0% 0% 0% ;
+  margin: 0% 0% 0% 0%;
+}
+
+
+.teamImage_Desktop {
+  height: 50px;
+}
+
+
+.dropDwonArrow_Desktop {
+  height: 10px;
+  padding: 20px 0px 15px 0px;
+}
+
+/*End of Desktop*/

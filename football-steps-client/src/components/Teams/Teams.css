@@ -1,0 +1,20 @@
+
+.teamCardContainer > div {
+    box-shadow: 0px 8px 8px rgba(200, 200, 200, 1);
+    border-radius: 10px;
+    border-top-width: 5px;
+    border-top: solid;
+    border-top-color: inherit ;
+    border-bottom-width: 5px;
+    border-bottom: solid;
+    border-bottom-color: inherit;
+    float: 'left'; 
+    width: '96%';
+    margin-top: 15px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 25px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(255,255,255);
+}
