@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: fbs-client-deployment
+  name: client-deployment
 spec: 
   replicas: 3
   selector:
@@ -12,7 +12,7 @@ spec:
       labels:
         component: fbs-client
     spec: 
-      container:
+      containers:
         - name: client
           image: jeremybamaddox/footballsteps-client
           ports:

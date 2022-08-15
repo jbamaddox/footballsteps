@@ -25,16 +25,16 @@ spec:
             - name: MONGO_USER
               valueFrom:
                 secretKeyRef:
-                  name: MONGO_USER
-                  key: MONGO_USER
+                  name: mongodb
+                  key: mongo-user
             - name: MONGO_PW
               valueFrom:
                 secretKeyRef:
-                  name: MONGO_PW
-                  key: MONGO_PW
+                  name: mongodb
+                  key: mongo-pw
             - name: MONGO_ACCOUNT
               valueFrom:
                 secretKeyRef:
-                  name: MONGO_ACCOUNT
-                  key: MONGO_ACCOUNT
+                  name: mongodb
+                  key: mongo-account
                   
