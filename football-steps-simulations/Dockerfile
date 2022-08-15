@@ -10,4 +10,4 @@ RUN npm install express --save
 
 COPY --chown=node:node . .
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "dev"]
