@@ -8,6 +8,6 @@ docker push jeremybamaddox/footballsteps-client:$SHA
 docker push jeremybamaddox/footballsteps-api:$SHA
 docker push jeremybamaddox/footballsteps-simulations:$SHA
 kubectl apply -f ./kubernetes
-kubectl set image deployments/api-deployment api=jeremybamaddox/footballsteps-api:$SHA
-kubectl set image deployments/client-deployment client=jeremybamaddox/footballsteps-client:$SHA
-kubectl set image deployments/simulations-deployment simulations=jeremybamaddox/footballsteps-simulations:$SHA
+kubectl set image deployment/api-deployment api=jeremybamaddox/footballsteps-api:$SHA
+kubectl set image deployment/client-deployment client=jeremybamaddox/footballsteps-client:$SHA
+kubectl set image deployment/simulations-deployment simulations=jeremybamaddox/footballsteps-simulations:$SHA
