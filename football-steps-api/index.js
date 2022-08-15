@@ -1,6 +1,8 @@
 const config = require('config');
 const mongoose = require('mongoose');
 const express = require('express');
+const keys = require('./keys');
+const helmet = require('helmet');
 const apiHome = require('./routes/home');
 const conferences = require('./routes/conferences');
 const teams = require('./routes/teams');
@@ -8,8 +10,6 @@ const games = require('./routes/games');
 const stats = require('./routes/stats');
 //  const users = require('./routes/users');
 //  const auth = require('./routes/auth');
-const keys = require('./keys');
-const helmet = require('helmet');
 
 
 const { createClient } = require('redis');
@@ -83,14 +83,14 @@ const app = express();
 
 app.use(helmet());
 
-//app.use((req, res, next) => {
-//    res.set({
-//        //'Access-Control-Allow-Origin': 'http://client:3000, http://router:2000, http://simulations:4001, http://localhost:8080',
-//        'Access-Control-Allow-Headers': 'x-auth-token, Content-Type, Accept',
-//        'Content-Type': 'application/json'
-//    });
-//    next();
-//});
+app.use((req, res, next) => {
+    res.set({
+        'Access-Control-Allow-Origin': 'http://client:3000, http://simulations:4001',
+        'Access-Control-Allow-Headers': 'x-auth-token, Content-Type, Accept',
+        'Content-Type': 'application/json'
+    });
+    next();
+});
 
 app.use(express.json());
 
