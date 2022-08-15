@@ -1,6 +1,6 @@
 docker build -t jeremybamaddox/footballsteps-client:latest -t jeremybamaddox/footballsteps-client:$SHA -f ./football-steps-client/Dockerfile ./football-steps-client
 docker build -t jeremybamaddox/footballsteps-api:latest -t jeremybamaddox/footballsteps-api:$SHA -f ./football-steps-api/Dockerfile ./football-steps-api
-docker build -t jeremybamaddox/footballsteps-simulations:latest -t jeremybamaddox/footballsteps-simulations:$SHA -f ./footballsteps-simulations/Dockerfile ./footballsteps-simulations
+docker build -t jeremybamaddox/footballsteps-simulations:latest -t jeremybamaddox/footballsteps-simulations:$SHA -f ./football-steps-simulations/Dockerfile ./football-steps-simulations
 docker push jeremybamaddox/footballsteps-client:latest
 docker push jeremybamaddox/footballsteps-api:latest
 docker push jeremybamaddox/footballsteps-simulations:latest
