@@ -1,8 +1,9 @@
-const config = require('config');
 const mongoose = require('mongoose');
+const cors = require("cors");
 const express = require('express');
-const keys = require('./keys');
 const helmet = require('helmet');
+
+const keys = require('./keys');
 const apiHome = require('./routes/home');
 const conferences = require('./routes/conferences');
 const teams = require('./routes/teams');
@@ -15,14 +16,6 @@ const stats = require('./routes/stats');
 const { createClient } = require('redis');
 require('./services/api-redis-cache.js');
 
-
-//Verify configuration
-if (!config.get('jwtPrivateKey')) {
-    console.log('Fatal Error: jwtPrivateKey is not defined');
-    process.exit(1);
-} else {
-    console.log('Configuration loaded successfully')
-}
 
 
 //Mongo Database Connection
@@ -83,6 +76,7 @@ if (!config.get('jwtPrivateKey')) {
 //Route Connections
 const app = express();
 
+app.use(cors());
 app.use(helmet());
 
 app.use((req, res, next) => {

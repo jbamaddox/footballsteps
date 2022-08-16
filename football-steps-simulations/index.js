@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
-const express = require('express');
-const simulations = require('./simulations');
-const keys = require('./keys')
-const { createClient } = require('redis');
+const cors = require("cors");
 const helmet = require('helmet');
+const express = require('express');
+const { createClient } = require('redis');
+
+const simulations = require('./simulations');
+const keys = require('./keys');
 
 //Database Connection
 (async function () {
@@ -26,7 +28,8 @@ const helmet = require('helmet');
             retry_strategy: () => {
                 console.log('redis connection retrying');
                 return 1000
-            }
+            },
+            connectTimeout: 300000
         });
 
         redisClient.on('error', (err) => console.log('Redis Error', err));
@@ -65,6 +68,7 @@ const helmet = require('helmet');
 
 //Route Connections
 const app = express();
+app.use(cors());
 app.use(helmet());
 
 

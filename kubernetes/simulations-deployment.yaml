@@ -19,7 +19,7 @@ spec:
             - containerPort: 4001
           env:
             - name: REDIS_HOST
-              value: redis-simulations-cache
+              value: simulations-redis-cluster-ip-service
             - name: REDIS_PORT
               value: '6379'
             - name: MONGO_USER
