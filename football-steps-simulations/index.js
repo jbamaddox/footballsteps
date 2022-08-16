@@ -25,7 +25,7 @@ const helmet = require('helmet');
             url: `redis://${keys.redisHost}:${keys.redisPort}`,
             retry_strategy: () => {
                 console.log('redis connection retrying');
-                1000
+                return 1000
             }
         });
 

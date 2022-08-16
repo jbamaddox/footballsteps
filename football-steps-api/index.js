@@ -43,10 +43,7 @@ if (!config.get('jwtPrivateKey')) {
 
         const redisClient = createClient({
             url: `redis://${keys.redisHost}:${keys.redisPort}`,
-            retry_strategy: () => {
-                console.log('redis connection retrying');
-                1000
-            }
+            retry_strategy: () => 1000
 
         });
 
