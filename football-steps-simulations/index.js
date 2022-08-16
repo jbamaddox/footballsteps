@@ -21,9 +21,12 @@ const helmet = require('helmet');
     try {
         console.log('starting connection attempt to RedisDB..');
 
-
         const redisClient = createClient({
-            url: `redis://${keys.redisHost}:${keys.redisPort}`
+            url: `redis://${keys.redisHost}:${keys.redisPort}`,
+            retry_strategy: () => {
+                console.log('redis connection retrying');
+                1000
+            }
         });
 
         redisClient.on('error', (err) => console.log('Redis Error', err));
@@ -64,6 +67,15 @@ const helmet = require('helmet');
 const app = express();
 app.use(helmet());
 
+
+app.use((req, res, next) => {
+    res.set({
+        'Access-Control-Allow-Origin': 'http://client:3000, http://api:4000',
+        'Access-Control-Allow-Headers': 'x-auth-token, Content-Type, Accept',
+        'Content-Type': 'application/json'
+    });
+    next();
+});
 
 app.use(express.json());
 

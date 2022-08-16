@@ -42,12 +42,17 @@ if (!config.get('jwtPrivateKey')) {
         console.log('starting connection attempt to RedisDB..');
 
         const redisClient = createClient({
-            url: `redis://${keys.redisHost}:${keys.redisPort}`
+            url: `redis://${keys.redisHost}:${keys.redisPort}`,
+            retry_strategy: () => {
+                console.log('redis connection retrying');
+                1000
+            }
+
         });
 
         redisClient.on('error', (err) => console.log('Redis Error', err));
 
-        await redisClient.connect()
+        await redisClient.connect();
 
         const value = await redisClient.set('isConnected', '1', 'testConnection');
         let flushed = '';
