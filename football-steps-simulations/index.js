@@ -71,14 +71,15 @@ app.use(cors());
 app.use(helmet());
 
 
-app.use((req, res, next) => {
-    res.set({
-        'Access-Control-Allow-Origin': 'http://client:3000, ',
-        'Access-Control-Allow-Headers': 'x-auth-token, Content-Type, Accept',
-        'Content-Type': 'application/json'
-    });
-    next();
-});
+//app.use((req, res, next) => {
+//    res.set({
+//        'Access-Control-Allow-Origin': 'http://client:3000, ',
+//        'Access-Control-Allow-Headers': 'x-auth-token, Content-Type, Accept',
+//        'Content-Type': 'application/json'
+//    });
+//    next();
+//});
+
 
 app.use(express.json());
 
