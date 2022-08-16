@@ -40,7 +40,7 @@ router.get('/recent', async (req, res) => {
 
     try {
         //Query the game database for all the games in the last 2 years
-        const teamGamesArray = await axios.get(`http://api:${process.env.PORT}/api/games/latest/year`)
+        const teamGamesArray = await axios.get(`/api/games/latest/year`)
             .then((response) => {
                 if (response.status === 200) {
                     return response.data

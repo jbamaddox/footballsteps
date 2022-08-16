@@ -26,7 +26,7 @@ offensivePassingContribution = async (passingOffenseTeam, passingDefenseTeam) =>
     try {
 
 
-        const offenseStats = await axios.get(`http://api:4000/api/stats/teamOffenseMade/${passingOffenseTeam}`)
+        const offenseStats = await axios.get(`/api/stats/teamOffenseMade/${passingOffenseTeam}`)
             .then((response) => {
                 if (response.status === 200) {
                     return response.data
@@ -41,7 +41,7 @@ offensivePassingContribution = async (passingOffenseTeam, passingDefenseTeam) =>
 
 
 
-        const defenseStats = await axios.get(`http://api:4000/api/stats/teamOffenseAllowed/${passingDefenseTeam}`)
+        const defenseStats = await axios.get(`/api/stats/teamOffenseAllowed/${passingDefenseTeam}`)
             .then((response) => {
                 if (response.status === 200) {
                     return response.data

@@ -73,7 +73,7 @@ app.use(helmet());
 
 app.use((req, res, next) => {
     res.set({
-        'Access-Control-Allow-Origin': 'http://client:3000, http://api:4000',
+        'Access-Control-Allow-Origin': 'http://client:3000, ',
         'Access-Control-Allow-Headers': 'x-auth-token, Content-Type, Accept',
         'Content-Type': 'application/json'
     });

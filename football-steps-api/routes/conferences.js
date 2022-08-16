@@ -26,7 +26,7 @@ router.get('/recent', async (req, res) => {
 
         //Get the games from the latest year
         //   '/api/games/latest/year'
-        const myGames = await axios.get(`http://api:${process.env.PORT}/api/games/latest/year`)
+        const myGames = await axios.get(`/api/games/latest/year`)
             .then((response) => {
 
                 if (response.status === 200) {

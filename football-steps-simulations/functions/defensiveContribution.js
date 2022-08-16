@@ -33,7 +33,7 @@ defensiveContribution = async (defenseMadeTeam, defenseAllowedTeamA, defenseAllo
 
 
             //Get relevant game data from database
-            const defenseStatsMade = await axios.get(`http://api:4000/api/stats/teamDefenseMade/${defenseMadeTeam}`)
+            const defenseStatsMade = await axios.get(`/api/stats/teamDefenseMade/${defenseMadeTeam}`)
                 .then((response) => {
                     if (response.status === 200) {
                         return response.data
@@ -46,7 +46,7 @@ defensiveContribution = async (defenseMadeTeam, defenseAllowedTeamA, defenseAllo
                     throw new Error(err);
                 });
 
-            const defenseStatsAllowed = await axios.get(`http://api:4000/api/stats/teamDefenseAllowed/${defenseAllowedTeamA}`)
+            const defenseStatsAllowed = await axios.get(`/api/stats/teamDefenseAllowed/${defenseAllowedTeamA}`)
                 .then((response) => {
                     if (response.status === 200) {
                         return response.data
@@ -216,7 +216,7 @@ defensiveContribution = async (defenseMadeTeam, defenseAllowedTeamA, defenseAllo
 
 
             //Get relevant game data from database
-            const defenseStatsMade = await axios.get(`http://api:4000/api/stats/teamDefenseMade/${defenseMadeTeam}`)
+            const defenseStatsMade = await axios.get(`/api/stats/teamDefenseMade/${defenseMadeTeam}`)
                 .then((response) => {
                     if (response.status === 200) {
                         return response.data
@@ -229,7 +229,7 @@ defensiveContribution = async (defenseMadeTeam, defenseAllowedTeamA, defenseAllo
                     throw new Error(err);
                 });
 
-            const defenseStatsAllowed = await axios.get(`http://api:4000/api/stats/teamDefenseAllowed/${defenseAllowedTeamA}`)
+            const defenseStatsAllowed = await axios.get(`/api/stats/teamDefenseAllowed/${defenseAllowedTeamA}`)
                 .then((response) => {
                     if (response.status === 200) {
                         return response.data
@@ -243,7 +243,7 @@ defensiveContribution = async (defenseMadeTeam, defenseAllowedTeamA, defenseAllo
                 });
 
 
-            const defenseStatsAllowedB = await axios.get(`http://api:4000/api/stats/teamDefenseAllowed/${defenseAllowedTeamB}`)
+            const defenseStatsAllowedB = await axios.get(`/api/stats/teamDefenseAllowed/${defenseAllowedTeamB}`)
                 .then((response) => {
                     if (response.status === 200) {
                         return response.data

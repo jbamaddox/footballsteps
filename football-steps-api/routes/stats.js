@@ -41,7 +41,7 @@ router.get('/specialTeamsAllowed/:teamName', async (req, res) => {
 
 
         //Get Games IDs For the latest weeks
-        const gameIds = await axios.get(`http://api:${process.env.PORT}/api/games/team/gameIds/${req.params.teamName}`)
+        const gameIds = await axios.get(`/api/games/team/gameIds/${req.params.teamName}`)
             .then((response) => {
 
                 if (response.status === 200) {
@@ -105,7 +105,7 @@ router.get('/specialTeamsMade/:teamName', async (req, res) => {
 
 
         //Get Games IDs For the latest weeks
-        const gameIds = await axios.get(`http://api:${process.env.PORT}/api/games/team/gameIds/${req.params.teamName}`)
+        const gameIds = await axios.get(`/api/games/team/gameIds/${req.params.teamName}`)
             .then((response) => {
                 if (response.status === 200) {
                     return response.data
@@ -171,7 +171,7 @@ router.get('/teamDefenseAllowed/:teamName', async (req, res) => {
 
 
         //Get Games IDs For the latest weeks
-        const gameIds = await axios.get(`http://api:${process.env.PORT}/api/games/team/gameIds/${req.params.teamName}`)
+        const gameIds = await axios.get(`/api/games/team/gameIds/${req.params.teamName}`)
             .then((response) => {
 
                 if (response.status === 200) {
@@ -236,7 +236,7 @@ router.get('/teamDefenseMade/:teamName', async (req, res) => {
 
 
         //Get Games IDs For the latest weeks
-        const gameIds = await axios.get(`http://api:${process.env.PORT}/api/games/team/gameIds/${req.params.teamName}`)
+        const gameIds = await axios.get(`/api/games/team/gameIds/${req.params.teamName}`)
             .then((response) => {
                 if (response.status === 200) {
                     return response.data
@@ -305,7 +305,7 @@ router.get('/teamOffenseAllowed/:teamName', async (req, res) => {
 
 
         //Get Games IDs For the latest weeks
-        const gameIds = await axios.get(`http://api:${process.env.PORT}/api/games/team/gameIds/${req.params.teamName}`)
+        const gameIds = await axios.get(`/api/games/team/gameIds/${req.params.teamName}`)
             .then((response) => {
 
                 if (response.status === 200) {
@@ -373,7 +373,7 @@ router.get('/teamOffenseMade/:teamName', async (req, res) => {
 
 
         //Get Games IDs For the latest weeks
-        const gameIds = await axios.get(`http://api:${process.env.PORT}/api/games/team/gameIds/${req.params.teamName}`)
+        const gameIds = await axios.get(`/api/games/team/gameIds/${req.params.teamName}`)
             .then((response) => {
                 if (response.status === 200) {
                     return response.data
@@ -441,7 +441,7 @@ router.get('/team/:teamName', async (req, res) => {
 
 
         //Get Games IDs For the latest week
-        const games = await axios.get(`http://api:${process.env.PORT}/api/games/team/${req.params.teamName}`)
+        const games = await axios.get(`/api/games/team/${req.params.teamName}`)
             .then((response) => {
                 if (response.status === 200) {
                     return response.data
@@ -518,7 +518,7 @@ router.get('/', async (req, res) => {
 
 
         //Get Games IDs For the latest week
-        const games = await axios.get(`http://api:${process.env.PORT}/api/games`)
+        const games = await axios.get(`/api/games`)
             .then((response) => {
                 if (response.status === 200) {
                     return response.data

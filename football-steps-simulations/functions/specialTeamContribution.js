@@ -30,7 +30,7 @@ specialTeamContribution = async (specialTeamsMadeTeam, specialTeamsAllowedTeam) 
 
 
         //Get stats for each team
-        const dataMade = await axios.get(`http://api:4000/api/stats/specialTeamsMade/${specialTeamsMadeTeam}`)
+        const dataMade = await axios.get(`/api/stats/specialTeamsMade/${specialTeamsMadeTeam}`)
             .then((response) => {
                 if (response.status === 200) {
                     return response.data
@@ -42,7 +42,7 @@ specialTeamContribution = async (specialTeamsMadeTeam, specialTeamsAllowedTeam) 
                 throw new Error(error)
             });
 
-        const dataAllowed = await axios.get(`http://api:4000/api/stats/specialTeamsAllowed/${specialTeamsAllowedTeam}`)
+        const dataAllowed = await axios.get(`/api/stats/specialTeamsAllowed/${specialTeamsAllowedTeam}`)
             .then((response) => {
                 if (response.status === 200) {
                     return response.data
