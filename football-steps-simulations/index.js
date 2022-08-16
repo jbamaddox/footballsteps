@@ -28,8 +28,7 @@ const keys = require('./keys');
             retry_strategy: () => {
                 console.log('redis connection retrying');
                 return 1000
-            },
-            connectTimeout: 300000
+            }
         });
 
         redisClient.on('error', (err) => console.log('Redis Error', err));
