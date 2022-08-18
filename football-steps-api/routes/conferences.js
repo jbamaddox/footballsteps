@@ -25,8 +25,8 @@ router.get('/recent', async (req, res) => {
         let recentConferences = []
 
         //Get the games from the latest year
-        //   'localhost:/api/games/latest/year'
-        const myGames = await axios.get(`localhost:/api/games/latest/year`)
+        //   'localhost:4000/api/games/latest/year'
+        const myGames = await axios.get(`localhost:4000/api/games/latest/year`)
             .then((response) => {
 
                 if (response.status === 200) {
